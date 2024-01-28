@@ -56,7 +56,7 @@ class Server:
             return []
         else:
             return data[first_index:last_index]
-        
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """
         returns a dictionary containing the following key-value pairs:
@@ -74,7 +74,7 @@ class Server:
         current_page = page
         data_page = self.get_page(page, page_size)
         nextPage = current_page + 1 if len(data_page) == page_size else None
-        prevPage = current_page + 1 if current_page > 1 else None
+        prevPage = current_page - 1 if current_page > 1 else None
         total_pages = math.ceil(len(self.dataset()) / page_size)
 
         info = {
