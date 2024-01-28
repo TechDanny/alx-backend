@@ -13,6 +13,6 @@ def index_range(page, page_size):
     if page <= 0 or page_size <= 0:
         raise ValueError("Must be positive numbers")
     first_index = (page - 1) * page_size
-    last_index = first_index + page_size - 1
+    last_index = first_index + page_size
 
     return first_index, last_index
