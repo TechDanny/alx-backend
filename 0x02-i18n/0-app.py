@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Basic Flask app
+"""
+
+
 from flask import Flask, render_template
 
 
@@ -9,7 +15,4 @@ def index():
     """
     defines a '/' route
     """
-    title = "Welcome to Holberton"
-    greet = "Hello world"
-
-    return render_template("0-index.html", title=title, greet=greet)
+    return render_template("0-index.html")
