@@ -23,3 +23,11 @@ class Config():
 babel = Babel(app)
 app.config.from_object(Config)
 babel.init_app(app)
+
+
+@app.route("/")
+def index():
+    """
+    define route index
+    """
+    return render_template("1-index.html")
