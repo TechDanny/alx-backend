@@ -11,7 +11,7 @@ from flask_babel import Babel
 app = Flask(__name__)
 
 
-class Config(object):
+class Config():
     """
     set up babel configurations
     """
