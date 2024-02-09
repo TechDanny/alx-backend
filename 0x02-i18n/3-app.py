@@ -26,7 +26,7 @@ babel.init_app(app)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """
     determines the best match with our supported languages.
     """
@@ -34,7 +34,7 @@ def get_locale():
 
 
 @app.route("/")
-def index():
+def index() -> str:
     """
     define route index
     """
